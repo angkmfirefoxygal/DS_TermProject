@@ -1,4 +1,8 @@
-//Calculaor in C using stack
+//Calculaor in C using stack_방구석개발자 resource
+//https://inbearblog.blogspot.com/2021/05/c.html 
+//postfix code calculator by using stack
+//Linked list stack calculator
+
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdlib.h>
