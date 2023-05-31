@@ -1,2 +1,2 @@
-# Project_1
+# Data Structure Term Project
  Project repository for Data Structure class.
