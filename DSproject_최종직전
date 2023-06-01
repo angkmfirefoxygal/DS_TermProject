@@ -1,0 +1,63 @@
+#include <stdio.h> // 입출력 헤더
+#include <conio.h> // getch() 사용위한 헤더파일
+#include <stdlib.h> // system 함수 사용
+#include <stdlib.h> // random한 num 뽑기 위해 선언
+#include <time.h> // 시작하는 시간 달리하여 매번 다른 난수 생성
+int main() {
+
+	int i, j, n = 0, pos = 0, arr[15] = {0};
+	system("cls");
+	
+
+	for (i = 0; i < 15; i++) {
+		
+		arr[i] = i; // 15명의 linear 배열 생성
+		printf("\n arr[%d] = ", i);
+		printf("%d", arr[i]);
+	}
+	printf("\n 수건 돌리기를 시작합니다.");
+	
+	srand(time(NULL));
+
+	n = 15;
+
+	int random = rand() % (n - 1);
+	pos = random;
+
+	for ( ;n>4; ) {//n이 3명 남을 때까지 무한 루프 돌도록 설정
+
+		printf("\narr[%d]가 수건을 받았습니다.",pos);
+		printf("\narr[%d]의 플레이어가 삭제됩니다.\n", pos+2);
+			
+
+			for (i = pos; i < n - 1 ; i++) {//n이 뽑혔을 때 n+2가 삭제되는 loop
+
+				
+				arr[i+2] = arr[i+3];
+				
+				
+			}
+			pos++;
+			n--;
+			
+			for (i = 0; i < n - 1; i++)
+
+				printf(" %d ", arr[i]);
+			
+			
+			
+			printf("\nn= '%d'", n);
+			
+
+			
+		
+	}
+	printf("\nOnly 3 person left, now game is end.");
+
+	
+	
+	
+
+	return 0;
+
+}
